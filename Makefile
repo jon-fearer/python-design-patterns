@@ -7,3 +7,4 @@ run: check-pip-env
 	python -m patterns
 
 test: check-pip-env
+	python -m unittest discover patterns '*_test.py'
