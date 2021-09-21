@@ -7,11 +7,11 @@ class Customer(TypedDict):
     name: str
 
 
-class Connection:
-    conn: None
+def get_connection() -> None:
+    return None
 
 
-def get_customer_from_database(connection: Connection, customer_id: int) -> Optional[Customer]:
+def get_customer_from_database(connection: None, customer_id: int) -> Optional[Customer]:
     print(connection)
     if customer_id == 1:
         return {"id": 1, "name": "Jon"}
@@ -20,7 +20,7 @@ def get_customer_from_database(connection: Connection, customer_id: int) -> Opti
 
 
 def get_customer(customer_id: int) -> Optional[Customer]:
-    return get_customer_from_database(Connection(), customer_id)
+    return get_customer_from_database(get_connection(), customer_id)
 
 
-get_customer_partial = partial(get_customer_from_database, Connection())
+get_customer_partial = partial(get_customer_from_database, get_connection())
