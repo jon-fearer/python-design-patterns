@@ -4,10 +4,10 @@ import io
 import unittest
 from unittest.mock import Mock
 
-from patterns.hollywood import string_processor
+from patterns.functional.hollywood import string_processor
 
 
-class TestPartial(unittest.TestCase):
+class TestHollywood(unittest.TestCase):
     def test_uppercase_processor(self) -> None:
         mock = Mock()
         mock.side_effect = print

@@ -1,5 +1,5 @@
 import unittest
-from patterns.partial import get_customer, get_customer_partial
+from patterns.functional.partial import get_customer, get_customer_partial
 
 
 class TestPartial(unittest.TestCase):

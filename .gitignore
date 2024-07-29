@@ -1,3 +1,4 @@
 .dmypy.json
 .idea
 .mypy_cache
+.DS_Store
